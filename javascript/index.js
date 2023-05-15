@@ -5,10 +5,9 @@ window.addEventListener('load', () => {
 
 function addFormatButton(type) {
 	const lastButton = gradioApp().querySelector(`#${type}_style_create`);
-	let formatButton = gradioApp().querySelector(`#${type}_format_prompt`);
 	if (!lastButton || !lastButton.parentNode)
 		return;
-	formatButton = createFormatButton(`#${type}_format_prompt`, type);
+	const formatButton = createFormatButton(`#${type}_format_prompt`, type);
 	lastButton.parentNode.append(formatButton);
 }
 
