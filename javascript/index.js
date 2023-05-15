@@ -4,10 +4,11 @@ window.addEventListener('load', () => {
 });
 
 function addFormatButton(type) {
+	let formatButton = gradioApp().querySelector(`#${type}_format_prompt`);
 	const lastButton = gradioApp().querySelector(`#${type}_style_create`);
-	if (!lastButton || !lastButton.parentNode)
+	if (formatButton || !lastButton || !lastButton.parentNode)
 		return;
-	const formatButton = createFormatButton(`#${type}_format_prompt`, type);
+	formatButton = createFormatButton(`${type}_format_prompt`, type);
 	lastButton.parentNode.append(formatButton);
 }
 
