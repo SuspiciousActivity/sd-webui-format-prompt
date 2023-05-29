@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+onUiLoaded(() => {
 	addFormatButton('txt2img');
 	addFormatButton('img2img');
 });
