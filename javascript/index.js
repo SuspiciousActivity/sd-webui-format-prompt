@@ -5,7 +5,7 @@ onUiLoaded(() => {
 
 function addFormatButton(type) {
 	let formatButton = gradioApp().querySelector(`#${type}_format_prompt`);
-	const lastButton = gradioApp().querySelector(`#${type}_style_create`);
+	const lastButton = gradioApp().querySelector(`#${type}_clear_prompt`);
 	if (formatButton || !lastButton || !lastButton.parentNode)
 		return;
 	formatButton = createFormatButton(`${type}_format_prompt`, type);
@@ -18,7 +18,7 @@ function createFormatButton(id, type) {
 	button.type = 'button';
 	button.innerHTML = '🪄';
 	button.title = 'Format prompt~🪄'
-	button.className = 'lg secondary gradio-button tool svelte-1ipelgc';
+	button.className = 'lg secondary gradio-button tool svelte-cmf5ev';
 	button.addEventListener('click', () => formatPrompts(type));
 	return button;
 }
